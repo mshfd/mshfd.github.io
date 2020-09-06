@@ -1,0 +1,139 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<script src="../../assets/lib/template.v1.js"></script>
+<script type="text/front-matter">
+  title: Durch SARS-CoV-2 verursachte oder induzierte Todesfälle in Deutschland
+  description: Gegenüberstellung der Erkrankungsdauer und den daraus resultierten Todesfällen
+  authors:
+    - Richard Schubert: http://rs.hemofektik.de
+  affiliations:
+    - MSHFD: https://www.mshfd.org/
+</script>
+
+<!-- Katex -->
+<script src="../../assets/lib/auto-render.min.js"></script>
+<script src="../../assets/lib/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="../../assets/lib/katex.min.css">
+<link rel="stylesheet" type="text/css" href="../../assets/widgets.css">
+
+<!-- Required -->
+<script src="../../assets/lib/lib.js"></script>
+<script src="../../assets/utils.js"></script>
+<script src="../../assets/lib/d3Slider.js"></script>
+<script src="../../assets/lib/d3CheckBox.js"></script>
+
+<div id="math-cache" style="display: none;">
+  <dt-math class="star">\star</dt-math>
+  <dt-math class="plus">+</dt-math>
+  <dt-math class="minus">-</dt-math>
+  <dt-math class="equals">=</dt-math>
+  <dt-math class="alpha">\alpha</dt-math>
+  <dt-math class="lambda">\lambda</dt-math>
+  <dt-math class="beta">\beta</dt-math>
+  <dt-math class="r">R_{j}= \displaystyle\sum_{i} p_{ij}</dt-math>
+  <dt-math class="alpha-equals">\alpha=</dt-math>
+  <dt-math class="offset">\Delta</dt-math>
+  <dt-math class="offset-equals">\Delta=</dt-math>
+  <dt-math class="beta-equals">\beta=</dt-math>
+  <dt-math class="beta-equals-zero">\beta = 0</dt-math>
+  <dt-math class="beta-equals-one">\beta=1</dt-math>
+  <dt-math class="alpha-equals-one-over-lambda-i">\alpha = 1/\lambda_i</dt-math>
+  <dt-math class="model">\text{model}</dt-math>
+  <dt-math class="p">0 p_1</dt-math>
+  <dt-math class="phat">0 \bar{p}_1</dt-math>
+  <dt-math class="two-sqrt-beta">2\sqrt{\beta}</dt-math>
+  <dt-math class="lambda-i">\lambda_i</dt-math>
+  <dt-math class="lambda-i-equals-zero">\lambda_i = 0</dt-math>
+  <dt-math class="alpha-gt-one-over-lambda-i">\alpha > 1/\lambda_i</dt-math>
+  <dt-math class="max-sigma-one">\max\{|\sigma_1|,|\sigma_2|\} > 1</dt-math>
+  <dt-math class="x-i-k">x_i^k - x_i^*</dt-math>
+  <dt-math class="xi-i">\xi_i</dt-math>
+  <dt-math class="beta-equals-one-minus">\beta = (1 - \sqrt{\alpha \lambda_i})^2</dt-math>
+  <dt-math class="pij">p_{ij}</dt-math>
+</div>
+<script>
+  function MathCache(id) {
+    return document.querySelector("#math-cache ." + id).innerHTML;
+  }
+</script>
+
+
+<dt-article class="centered">
+  <h1>Durch SARS-CoV-2 verursachte oder induzierte Todesfälle in Deutschland</h1>
+
+  <dt-byline class="l-page"></dt-byline>
+
+  <h2>Gegenüberstellung der Erkrankungsdauer und den daraus resultierten Todesfällen</h2>
+  <p>
+    - RKIs SARS-CoV-2 Steckbrief <dt-cite key="Wallinga2004"></dt-cite>.
+    - Statistik zum mittleren Krankheitsverlauf
+    - Datenquelle für Todesfälle mit Erkrankungsbeginn RKI (csv) <dt-cite key="Wallinga2004"></dt-cite>.
+    - Der Erkrankungsbeginn für SARS-CoV-2 Fälle wird mit aufgeführt.
+  </p>
+
+  <figure style="position:relative; width:920px;height:620px;" id="epidemic_fig">
+
+    <img id="chart" src="symptom-onset-to-death.png">
+    <figcaption style="position:absolute; text-align:left; left:135px; width:650px; font-family:'Open Sans'">
+      Todesfälle <svg id="symptoms-indicator"
+        style="position:relative; top:2px; width:3px; height:14px; background:#1F77B4"></svg> deren Ursache
+      wahrscheinlich nicht der Infektion mit SARS-CoV-2 zugeschrieben werden kann.
+      Todesfälle <svg id="symptoms-indicator"
+        style="position:relative; top:2px; width:3px; height:14px; background:#D62728"></svg> die
+      wahrscheinlich durch SARS-CoV-2 verursacht oder induziert wurden. Stand 20.09.2020
+    </figcaption>
+  </figure>
+
+  <p>
+    - über 2800 Todesfälle die ohne Symptome gestorben sind, nur mit einem positiven SARS-CoV-2 Test.
+    - die ersten sieben Tagen
+    - 1794 von 9325 sind weniger als 20% der offiziell gezählten Todesfälle
+    - Was ist mit Fällen die eine Erkrankungsdauer von mehr als 30 Tagen aufweisen?
+  </p>
+  <p>
+    - Konklusion?
+  </p>
+</dt-article>
+
+<dt-appendix class="centered">
+
+  <!--<h3>Acknowledgments</h3>
+
+  <p>
+    I am deeply indebted to the editorial contributions of 
+  </p>
+  <p>
+    I am also grateful to 
+  </p>
+
+  <p>
+    Many thanks to the numerous pull requests and issues filed on github. Thanks in particular, to.
+  </p>-->
+
+  <!--<h4>Discussion and Review</h4>
+  <p>
+    <a href="https://github.com/distillpub/post--momentum/issues/29">Reviewer A - Matt Hoffman</a><br>
+    <a href="https://github.com/distillpub/post--momentum/issues/34">Reviewer B - Anonymous</a><br>
+    <a href="https://github.com/distillpub/post--momentum/issues/51">Discussion with User derifatives</a>
+  </p>-->
+
+</dt-appendix>
+
+
+<script type="text/bibliography">
+@article{Wallinga2004,
+  title={Different epidemic curves for severe acute respiratory syndrome reveal similar impacts of control measures},
+  author={Jacco Wallinga, Peter Teunis},
+  journal={American journal of epidemiology},
+  volume={160},
+  number={6},
+  pages={509-16},
+  year={2004},
+  publisher={Oxford University Press},
+  url={https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7110200/},
+  doi={10.1093/aje/kwh255}
+}
+</script>
