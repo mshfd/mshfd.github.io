@@ -18221,8 +18221,7 @@
       window.document.addEventListener("DOMContentLoaded", function (event) {
         renderOnLoad(window.document, data);
         // Add a banner if we're not on localhost.
-        if (window.location.hostname !== "localhost" && window.location.origin !== "file://" &&
-          window.location.hostname != "mshfd.github.io") {
+        if (window.location.hostname !== "localhost" && window.location.origin !== "file://" && window["isDraft"]) {
           banner(window.document, data);
         }
         generateCrossref(data);
