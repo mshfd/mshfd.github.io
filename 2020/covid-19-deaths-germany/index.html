@@ -70,33 +70,79 @@
 
   <h2>Gegenüberstellung der Erkrankungsdauer und den daraus resultierten Todesfällen</h2>
   <p>
-    - RKIs SARS-CoV-2 Steckbrief <dt-cite key="Wallinga2004"></dt-cite>.
-    - Statistik zum mittleren Krankheitsverlauf
-    - Datenquelle für Todesfälle mit Erkrankungsbeginn RKI (csv) <dt-cite key="Wallinga2004"></dt-cite>.
+    Jeder Todesfall ist tragisch und bedauerlich. Jede noch so alte Person, welche durch COVID-19 vorzeitig gestorben
+    ist, hatte möglicherweise noch eine Lebenserwartung von mehreren Jahren.
+    <br />
+
+    Die Gegenüberstellung zur üblichen Zählart der Todesursache wäre nötig, um die Auswertung über diese Analyse genauer
+    zu gestalten.
+    Wenn multimorbidität und obduktionsergebnisse mit eine Rolle spielen, wäre die Auswertung der Krankenakten aller
+    offiziell gezählten Todesfälle mit Ursache COVID-19 genauer zu betrachten.
+    Schweren Pneumonien mit Lungenversagen sind Krankheitsverläufe von COVID-19 die zum Tod führen <dt-cite
+      key="RKI2020"></dt-cite>. Todesfälle ohne schwere Symptome sind eher selten <dt-cite key="Guan2020"></dt-cite>.
+    <br />
+
+    Im SARS-CoV-2 Steckbrief des Robert Koch-Institut zur Coronavirus-Krankheit-2019 werden die mittleren Zeitintervalle
+    des Krankheitsverlauf von COVID-19 und Behandlung aufgezeigt.
+    <dt-cite key="RKI2020"></dt-cite>.
+  </p>
+
+  <figure style="position:relative;height:370px;">
+
+    <a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Steckbrief.html#doc13776792bodyText11"
+      target="_blank">
+      <img src="Abbildung1_Erregersteckbrief.png">
+    </a>
+    <figcaption style="position:absolute; text-align:left; width:650px; font-family:'Open Sans'">
+      Mediane Zeiträume bis zu verschiedenen Endpunkten sowie stationäre Aufenthaltsdauern (orientierende Angaben,
+      basierend auf der aktuellen Studienlage) - Quelle:
+      <a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Steckbrief.html#doc13776792bodyText11"
+        target="_blank">Robert Koch-Institut</a>
+    </figcaption>
+  </figure>
+  <p>
+    - Statistik zum mittleren Krankheitsverlauf in Worten
+
+    Es ist zu anzunehmen dass Todesfälle erst nach Tagen des Krankheitsbeginn eintreten kann, da eine ausreichende
+    Ausbreitung des Virus und die damit einhergehenden Beeinträchtigungen auf den Körper zuvor nicht möglich ist.
+    Die Methode welche angewendet wird, um Todesfälle mit der Ursache COVID-19 zu deklarieren muss daher betrachtet
+    werden. <dt-cite key="RKI2020FAQ"></dt-cite>
+
+    - Datenquelle für Todesfälle mit Erkrankungsbeginn RKI (csv) <dt-cite key="RKI2020Data"></dt-cite>.
     - Der Erkrankungsbeginn für SARS-CoV-2 Fälle wird mit aufgeführt.
   </p>
 
-  <figure style="position:relative; width:920px;height:620px;" id="epidemic_fig">
+  <figure style="position:relative; width:920px;height:580px;">
 
     <img id="chart" src="symptom-onset-to-death.png">
     <figcaption style="position:absolute; text-align:left; left:135px; width:650px; font-family:'Open Sans'">
+      Gegenüberstellung der Erkrankungsdauer (in Tagen) bis zum eintreten des Todes aller positiv getesteten
+      SARS-CoV-2 Fälle in Deutschland.
       Todesfälle <svg id="symptoms-indicator"
         style="position:relative; top:2px; width:3px; height:14px; background:#1F77B4"></svg> deren Ursache
       wahrscheinlich nicht der Infektion mit SARS-CoV-2 zugeschrieben werden kann.
       Todesfälle <svg id="symptoms-indicator"
         style="position:relative; top:2px; width:3px; height:14px; background:#D62728"></svg> die
-      wahrscheinlich durch SARS-CoV-2 verursacht oder induziert wurden. Stand 20.09.2020
+      wahrscheinlich durch SARS-CoV-2 verursacht oder induziert wurden. Stand 06.09.2020
     </figcaption>
   </figure>
 
   <p>
-    - über 2800 Todesfälle die ohne Symptome gestorben sind, nur mit einem positiven SARS-CoV-2 Test.
+    - über 2800 Todesfälle die ohne Symptome oder Krankheitsverlauf gestorben sind, nur mit einem positiven SARS-CoV-2
+    Test.
     - die ersten sieben Tagen
-    - 1794 von 9325 sind weniger als 20% der offiziell gezählten Todesfälle
-    - Was ist mit Fällen die eine Erkrankungsdauer von mehr als 30 Tagen aufweisen?
+    - 1858 von 9325 sind ungefähr 20% der offiziell gezählten Todesfälle
+    <br />
+    Krankenhausaufenthalte mit Todesfolge mit einer Dauer von mehr als 80 Tagen sind äußerst selten <dt-cite
+      key="Karagiannidis2020">
+    </dt-cite>.
+    Die gehäufte Anzahl an Todesfällen über 90 Tage nach Krankheitsbeginn sind vermutlich im Anschluss an den
+    jeweiligen Krankenhausaufenthalt aufgetreten. Diese Todesfälle sind wahrscheinlich durch COVID-19 induziert,
+    auch wenn COVID-19 kuriert wurde.
   </p>
   <p>
     - Konklusion?
+    Warum ist diese Betrachtungsweise valide?
   </p>
 </dt-article>
 
@@ -122,20 +168,62 @@
     <a href="https://github.com/distillpub/post--momentum/issues/51">Discussion with User derifatives</a>
   </p>-->
 
+  <h3 id="updates-and-corrections">Aktualisierung und Korrekturen</h3>
+  <p>
+    Falls sie Fehler sehen oder Änderungen vorschlagen möchten, erstellen sie bitte einen <a
+      href="https://github.com/mshfd/mshfd.github.io/issues/new" target="_blank">Issue auf Github</a>.
+  </p>
+
+
 </dt-appendix>
 
 
 <script type="text/bibliography">
-@article{Wallinga2004,
-  title={Different epidemic curves for severe acute respiratory syndrome reveal similar impacts of control measures},
-  author={Jacco Wallinga, Peter Teunis},
-  journal={American journal of epidemiology},
-  volume={160},
-  number={6},
-  pages={509-16},
-  year={2004},
-  publisher={Oxford University Press},
-  url={https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7110200/},
-  doi={10.1093/aje/kwh255}
+@article{RKI2020,
+  title={SARS-CoV-2 Steckbrief zur Coronavirus-Krankheit-2019 (COVID-19)},
+  author={Robert Koch-Institut},
+  year={2020-09-04},
+  publisher={Robert Koch-Institut},
+  url={https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Steckbrief.html#doc13776792bodyText11}
+}
+@article{RKI2020FAQ,
+  title={Antworten auf häufig gestellte Fragen zum Coronavirus SARS-CoV-2 / Krankheit COVID-19},
+  author={Robert Koch-Institut},
+  year={2020-08-07},
+  publisher={Robert Koch-Institut},
+  url={https://www.rki.de/SharedDocs/FAQ/NCOV2019/gesamt.html}
+}
+@article{RKI2020Data,
+  title={CSV mit den aktuellen Covid-19 Infektionen pro Tag (Zeitreihe)},
+  author={Robert Koch-Institut},
+  year={2020-09-07},
+  publisher={Robert Koch-Institut},
+  url={https://www.arcgis.com/home/item.html?id=f10774f1c63e40168479a1feb6c7ca74}
+}
+@article{Karagiannidis2020,
+  doi = {10.1016/s2213-2600(20)30316-7},
+  url = {https://doi.org/10.1016/s2213-2600(20)30316-7},
+  year = {2020},
+  month = sep,
+  publisher = {Elsevier {BV}},
+  volume = {8},
+  number = {9},
+  pages = {853--862},
+  author = {Christian Karagiannidis and Carina Mostert and Corinna Hentschker and Thomas Voshaar and Jürgen Malzahn and Gerhard Schillinger and Jürgen Klauber and Uwe Janssens and Gernot Marx and Steffen Weber-Carstens and Stefan Kluge and Michael Pfeifer and Linus Grabenhenrich and Tobias Welte and Reinhard Busse},
+  title = {Case characteristics, resource use, and outcomes of 10'021 patients with COVID-19 admitted to 920 German hospitals: an observational study},
+  journal = {The Lancet Respiratory Medicine}
+}
+@article{Guan2020,
+  doi = {10.1056/nejmoa2002032},
+  url = {https://doi.org/10.1056/nejmoa2002032},
+  year = {2020},
+  month = apr,
+  publisher = {Massachusetts Medical Society},
+  volume = {382},
+  number = {18},
+  pages = {1708--1720},
+  author = {Wei-jie Guan and Zheng-yi Ni and Yu Hu and Wen-hua Liang and Chun-quan Ou and Jian-xing He and Lei Liu and Hong Shan and Chun-liang Lei and David S.C. Hui and Bin Du and Lan-juan Li and Guang Zeng and Kwok-Yung Yuen and Ru-chong Chen and Chun-li Tang and Tao Wang and Ping-yan Chen and Jie Xiang and Shi-yue Li and Jin-lin Wang and Zi-jing Liang and Yi-xiang Peng and Li Wei and Yong Liu and Ya-hua Hu and Peng Peng and Jian-ming Wang and Ji-yang Liu and Zhong Chen and Gang Li and Zhi-jian Zheng and Shao-qin Qiu and Jie Luo and Chang-jiang Ye and Shao-yong Zhu and Nan-shan Zhong},
+  title = {Clinical Characteristics of Coronavirus Disease 2019 in China},
+  journal = {New England Journal of Medicine}
 }
 </script>
