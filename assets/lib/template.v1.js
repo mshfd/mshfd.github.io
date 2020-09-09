@@ -3832,6 +3832,9 @@
     data.title = localData.title ? localData.title : "Untitled";
     data.description = localData.description ? localData.description : "No description.";
 
+    data.url = localData.url ? localData.url : window.location.href;
+    data.previewURL = localData.previewURL ? localData.previewURL : undefined;
+
     data.authors = localData.authors ? localData.authors : [];
 
     data.authors = data.authors.map(function (author, i) {
